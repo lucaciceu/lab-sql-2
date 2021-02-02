@@ -28,6 +28,9 @@ select avg(length) as average_duration from film;
 
 select avg(length)/60 as average_duration_in_hours from film;
 
+select convert(avg(length),time)
+from sakila.film;
+
 select * from film where length > 180;
 
 select *, concat(first_name + '.' + last_name + '@sakilacustomer.org') as contact_info from customer;
